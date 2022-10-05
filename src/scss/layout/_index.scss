@@ -2,3 +2,11 @@
 @forward 'header';
 @forward 'main';
 @forward 'footer';
+
+.l-main-fv {
+  background-color: #eee;
+
+  &__inner {
+    color: $font-white;
+  }
+}
