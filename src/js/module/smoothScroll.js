@@ -8,11 +8,14 @@ window.addEventListener(
   'click',
   (event) => {
     const anchorElement = event.target.closest('a[href*="#"]');
-    const anchorHash = anchorElement.hash;
-
-    if (!anchorHash) {
+    if (!anchorElement) {
       return;
     }
+    const anchorHash = anchorElement.hash;
+
+    // if (!anchorHash) {
+    //   return;
+    // }
 
     if (event.button === 0 && !isModifiedEvent(event)) {
       if (location.hash !== anchorHash) {
